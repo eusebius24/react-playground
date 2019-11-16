@@ -3,7 +3,7 @@ import './Messages.css';
 
 export default function Messages(props) {
     const badge = props.unread
-    ? <div className = 'unread-count'>{props.unread}</div>
+    ? <div className = 'unread-count badge'>{props.unread}</div>
     : null;
     return (
         <div className="messages">
