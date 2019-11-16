@@ -8,20 +8,17 @@ class Accordion extends React.Component {
         currentSection: null
     }
 
-    handleButtonClick = (key) => {
-        console.log('button clicked!', {key});
-        const ul = document.querySelector('ul');
-        const children = ul.children
-        console.log(children)
+    handleButtonClick () {
+        console.log('button clicked!', {index});
         
     }
     render() {
         const accordion = this.props.sections.map((section, index) => (
            <li key={section.title}>
-            <button key={index} onClick={(e) => this.handleButtonClick(this.key)}>
+            <button key={index} onClick={() => this.handleButtonClick(index)}>
                     {section.title}
             </button>
-            <p className="section hidden">
+            <p className="section">
                 {section.content}
             </p>
             </li>
